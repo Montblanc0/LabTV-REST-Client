@@ -1,0 +1,109 @@
+@import url(reset.css);
+@import url(media.css);
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: #fff;
+}
+
+@font-face {
+    font-family: 'tommy';
+    src: url('assets/font/tommy.woff2') format('woff2'), url('assets/font/tommy.woff') format('woff'), url('assets/font/tommy.otf');
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('assets/font/Montserrat-Black.woff2') format('woff2'), url('assets/font/Montserrat-Black.woff') format('woff'), url('assets/font/Montserrat-Black.ttf');
+}
+
+html,
+body {
+    height: calc(100% - 50px);
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #28272A;
+    font-family: 'tommy', sans-serif;
+    overflow-x: visible;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background-color: #393840;
+    background-image: url(assets/pics/logo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+}
+
+#pusher {
+    margin-bottom: 100px;
+}
+
+.glow:hover {
+    background-color: #706D75
+}
+
+.glow {
+    transition: 0.3s;
+}
+
+footer {
+    background-color: #393840;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+    transition: 0.3s;
+}
+
+footer img:hover {
+    width: 36px;
+    height: 36px;
+}
+
+footer a {
+    display: block;
+    margin: 8px 15px;
+    float: left;
+}
+
+#social {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.close {
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: calc(100% - 50px);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

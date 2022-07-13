@@ -1,0 +1,43 @@
+<div class="content-layer">
+    <div class="content-view">
+        <div class="content-absolute">
+            <img class="close glow closeVideo" src="assets/pics/fi-rr-cross-small.svg" alt="Chiudi"
+                (click)="hideOverlay()">
+
+            <app-player [movie]="movie"></app-player>
+
+            <div id="altro">
+                <h2>{{movie.title}}</h2>
+                <p>{{movie.plot}}</p>
+                <p class="small-detail"><strong>Registi: </strong>{{directors}}</p>
+                <p class="small-detail"><strong>Cast: </strong>{{stars}}</p>
+                <p class="small-detail"><strong>Generi: </strong>{{genres}}</p>
+                <span class="overlay-buttons">
+                    <button *ngIf="!hasMovie" (click)="buyMovie(movie.id)" [disabled]="disabler"><img
+                            src="assets/pics/fi-rr-shopping-cart-add.svg">
+                        <p>Acquista</p>
+                    </button>
+                    <button *ngIf="hasMovie" (click)="returnMovie()" [disabled]="disabler"><img
+                            src="assets/pics/fi-rr-recycle.svg">
+                        <p>Restituisci</p>
+                    </button>
+                    <button *ngIf="!likesMovie" (click)="likeMovie(movie.id)" [disabled]="disabler"><img
+                            src="assets/pics/fi-rr-heart.svg">
+                        <p>Mi piace</p>
+                    </button>
+                    <button *ngIf="likesMovie" (click)="unlikeMovie()" [disabled]="disabler"><img
+                            src="assets/pics/fi-rr-heart-full.png">
+                        <p>Mi piace</p>
+                    </button>
+                </span>
+
+                <h2 *ngIf="similars">Potrebbero piacerti</h2>
+                <div class="similars" (click)="checkLogin()" *ngFor="let similar of similars, let i = index">
+                    <img [src]="similar['image']" loading="lazy">
+                    <p>{{similar['title']}}</p><span><img src="assets/pics/fi-rr-play.svg"></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

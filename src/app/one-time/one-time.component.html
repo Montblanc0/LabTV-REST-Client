@@ -1,0 +1,45 @@
+<div class="form-group" id="fillDB">
+    <form (ngSubmit)="sendAllMovieDetails($event)" novalidate>
+        <button type="submit">Send All Movies</button>
+    </form>
+
+    <form (ngSubmit)="sendAllMovieTrailers($event)" novalidate>
+        <button type="submit">Send All Trailers</button>
+    </form>
+
+</div>
+<!-- <div class="form-group">
+    <form (ngSubmit)="fetchMovieDetails($event)" novalidate>
+        <button type="submit">Fetch Movie Details</button>
+    </form>
+    <form (ngSubmit)="sendMovieDetails($event)" novalidate>
+        <button type="submit">Send One Movie (TEST)</button>
+    </form>
+    <form (ngSubmit)="fetchMovieTrailers($event)" novalidate>
+        <button type="submit">Fetch Movie Trailers</button>
+    </form>
+    <form (ngSubmit)="test($event)" novalidate>
+        <button type="submit">TEST</button>
+    </form>
+    <form (ngSubmit)="prova($event)" novalidate>
+        <button type="submit">PROVA</button>
+    </form>
+    <form (ngSubmit)="isLoading = !isLoading" novalidate>
+        <button type="submit">Loading</button>
+    </form>
+</div> -->
+<div *ngIf="isLoading" class="loading-container">
+    <div class="loading">
+        <div></div>
+        <!--important-->
+        <div></div>
+        <!--important-->
+        <div></div>
+        <!--important-->
+    </div>
+</div>
+
+<div class="results">
+    <h1 *ngIf="errorMessage && !isLoading">{{errorMessage}}</h1>
+    <h1 *ngIf="movieDetails.length != 0 && !isLoading">{{movieDetails.length}} risultati disponibili in console</h1>
+</div>
