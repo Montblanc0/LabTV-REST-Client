@@ -45,6 +45,6 @@ A build is also provided, but still requires [npm](https://docs.npmjs.com/downlo
 
 ### Credits
 
-Icons: Uicons by Flaticon(https://www.flaticon.com/uicons)
+Icons: [Uicons by Flaticon](https://www.flaticon.com/uicons)
 
-Font: MADE Tommy by MadeType(https://www.behance.net/madetype)
+Font: [MADE Tommy by MadeType](https://www.behance.net/madetype)
